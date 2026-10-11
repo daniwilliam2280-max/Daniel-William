@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENGECOL Energia Solar LTDA | Economia e Energia Fotovoltaica</title>
+  <meta name="description" content="Site oficial da ENGECOL Energia Solar LTDA. Soluções em energia solar fotovoltaica para residências, comércios, indústrias e usinas em solo em Mato Grosso e região.">
+  
+  <!-- Tailwind CSS CDN para funcionamento direto no VS Code sem compilação -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              dark: '#041a0f',
+              darker: '#03140b',
+              surface: '#072d1d',
+              card: '#062417',
+              lime: '#84cc16',
+              limeHover: '#65a30d',
+              solar: '#facc15'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #03140b;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #14532d;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #16a34a;
+    }
+    /* Estilos para acordes do FAQ */
+    details > summary {
+      list-style: none;
+    }
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-[#041a0f] text-slate-100 antialiased selection:bg-lime-500 selection:text-slate-950 flex flex-col min-h-screen">
+
+  <!-- Micro Announcement Bar -->
+  <div class="bg-[#03140b] border-b border-emerald-950 text-xs text-slate-300 py-1.5 px-4 hidden sm:block">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <span class="text-lime-400 font-semibold flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-lime-400 animate-pulse"></span>
+          Soluções em Energia Solar Fotovoltaica
+        </span>
+        <span class="text-slate-400">·</span>
+        <span>Atendimento em Mato Grosso e Região</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:5566996439811" class="hover:text-white transition-colors">📞 (66) 99643-9811</a>
+        <span class="text-slate-400">|</span>
+        <a href="https://www.instagram.com/engecol_solar/" target="_blank" rel="noopener noreferrer" class="hover:text-lime-400 transition-colors">📸 @engecol_solar</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-[#062417]/95 backdrop-blur-md border-b border-emerald-900/40 py-3.5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <!-- Logo Oficial Vetorial ENGECOL -->
+      <a href="#inicio" class="flex items-center gap-3 select-none">
+        <div class="relative flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-br from-[#062417] to-[#0a4427] border border-lime-400/50 shadow-md">
+          <svg viewBox="0 0 48 48" fill="none" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="9" fill="#facc15" />
+            <circle cx="24" cy="24" r="14" stroke="#84cc16" stroke-width="2" stroke-dasharray="3 3" opacity="0.8" />
+            <path d="M17 24H31M24 17V31" stroke="#062e16" stroke-width="1.5" stroke-linecap="round" />
+            <path d="M24 4V8M24 40V44M4 24H8M40 24H44M10 10L13 13M35 35L38 38M10 38L13 35M35 13L38 10" stroke="#facc15" stroke-width="2.5" stroke-linecap="round" />
+          </svg>
+          <span class="absolute -top-1 -right-1 flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-lime-500"></span>
+          </span>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl md:text-2xl font-black tracking-wider text-white uppercase font-sans leading-none">
+            ENGE<span class="text-lime-400">COL</span>
+          </span>
+          <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-lime-400 mt-0.5">
+            ENERGIA SOLAR LTDA
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-200">
+        <a href="#inicio" class="hover:text-lime-400 transition-colors">Início</a>
+        <a href="#sobre" class="hover:text-lime-400 transition-colors">Sobre</a>
+        <a href="#servicos" class="hover:text-lime-400 transition-colors">Serviços</a>
+        <a href="#galeria" class="hover:text-lime-400 transition-colors">Galeria</a>
+        <a href="#economia" class="hover:text-lime-400 transition-colors">Economia</a>
+        <a href="#usinas" class="hover:text-lime-400 transition-colors">Usinas</a>
+        <a href="#financiamento" class="hover:text-lime-400 transition-colors">Financiamento</a>
+        <a href="#faq" class="hover:text-lime-400 transition-colors">Dúvidas</a>
+        <a href="#contato" class="hover:text-lime-400 transition-colors">Contato</a>
+      </nav>
+
+      <!-- CTA & Mobile Toggle -->
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/5566996439811?text=Ol%C3%A1%20J%C3%BAnior%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20energia%20solar%20com%20a%20ENGECOL." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 font-bold text-sm shadow-md transition-all">
+          <span>💬 WhatsApp</span>
+        </a>
+        <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg bg-emerald-900/60 border border-emerald-700 text-slate-200" aria-label="Abrir menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobileMenu" class="hidden lg:hidden px-4 pt-3 pb-4 space-y-2 bg-[#041a0f] border-b border-emerald-800">
+      <a href="#inicio" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-emerald-900">Início</a>
+      <a href="#sobre" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-emerald-900">Sobre a ENGECOL</a>
+      <a href="#servicos" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-emerald-900">Nossos Serviços</a>
+      <a href="#galeria" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-emerald-900">Galeria de Obras Reais</a>
+      <a href="#economia" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-emerald-900">Simulador de Economia</a>
+      <a href="#usinas" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-emerald-900">Usinas & Campo</a>
+      <a href="#financiamento" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-emerald-900">Financiamento</a>
+      <a href="#faq" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-emerald-900">Perguntas Frequentes</a>
+      <a href="#contato" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-emerald-900">Contato</a>
+      <a href="https://wa.me/5566996439811" target="_blank" class="block text-center mt-3 py-2.5 rounded-lg bg-lime-500 text-slate-950 font-bold text-sm">
+        Falar com Júnior Moraes no WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="py-16 lg:py-24 border-b border-emerald-950 bg-gradient-to-b from-[#062417] to-[#041a0f]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Headline -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950 border border-lime-400/40 text-lime-300 text-xs font-semibold">
+            <span class="w-2 h-2 rounded-full bg-lime-400 animate-pulse"></span>
+            Soluções em Energia Fotovoltaica
+          </div>
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+            Energia solar para sua <span class="text-lime-400">casa, comércio</span> e empresa.
+          </h1>
+          <p class="text-base sm:text-lg text-slate-200 max-w-2xl leading-relaxed">
+            Reduza até 95% da sua conta de luz com projetos fotovoltaicos sob medida, engenharia especializada e facilidade de financiamento com a ENGECOL.
+          </p>
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <a href="https://wa.me/5566996439811?text=Ol%C3%A1%20J%C3%BAnior%2C%20gostaria%20de%20um%20or%C3%A7amento%20de%20energia%20solar." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 font-black text-base shadow-xl transition-all">
+              <span>Solicitar orçamento pelo WhatsApp</span>
+            </a>
+            <a href="#servicos" class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-emerald-950 hover:bg-emerald-900 text-white font-semibold text-base border border-emerald-700 transition-all">
+              <span>Conheça nossos serviços →</span>
+            </a>
+          </div>
+          <div class="pt-4 flex flex-wrap items-center gap-6 text-xs sm:text-sm text-slate-300 border-t border-emerald-900/60">
+            <span>🛡️ Projetos 100% Homologados</span>
+            <span>📉 Economia de até 95%</span>
+            <span>⚡ Atendimento: Júnior Moraes</span>
+          </div>
+        </div>
+
+        <!-- Hero Card Graphic -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-3xl overflow-hidden border-2 border-emerald-600/50 bg-[#072d1d] shadow-2xl p-6 space-y-4">
+            <div class="flex items-center justify-between border-b border-emerald-800 pb-3">
+              <div>
+                <span class="text-xs uppercase font-bold text-lime-400">ENGECOL ENERGIA SOLAR</span>
+                <h4 class="text-base font-bold text-white">Engenharia e Sustentabilidade</h4>
+              </div>
+              <span class="text-xs bg-lime-500/20 text-lime-300 border border-lime-500/40 px-2.5 py-1 rounded-md font-bold">Em Operação</span>
+            </div>
+            <!-- Vector Solar Array Graphic -->
+            <div class="h-64 rounded-2xl bg-gradient-to-br from-[#06291a] to-[#03150c] flex items-center justify-center p-4 border border-emerald-800">
+              <svg viewBox="0 0 300 200" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <rect width="300" height="200" fill="#082b1b" rx="8"/>
+                <circle cx="230" cy="50" r="30" fill="#facc15" opacity="0.8"/>
+                <g transform="translate(30, 60)">
+                  <rect x="0" y="0" width="70" height="50" fill="#1e3a5f" stroke="#93c5fd" stroke-width="1.5" rx="3"/>
+                  <rect x="80" y="0" width="70" height="50" fill="#1e3a5f" stroke="#93c5fd" stroke-width="1.5" rx="3"/>
+                  <rect x="160" y="0" width="70" height="50" fill="#1e3a5f" stroke="#93c5fd" stroke-width="1.5" rx="3"/>
+                  <rect x="0" y="60" width="70" height="50" fill="#1e3a5f" stroke="#93c5fd" stroke-width="1.5" rx="3"/>
+                  <rect x="80" y="60" width="70" height="50" fill="#1e3a5f" stroke="#93c5fd" stroke-width="1.5" rx="3"/>
+                  <rect x="160" y="60" width="70" height="50" fill="#1e3a5f" stroke="#93c5fd" stroke-width="1.5" rx="3"/>
+                </g>
+              </svg>
+            </div>
+            <p class="text-xs text-slate-300">
+              Módulos fotovoltaicos de alto rendimento com homologação rápida junto à concessionária de energia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banners Section -->
+  <section id="banners" class="py-16 bg-[#051e12] border-b border-emerald-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-emerald-950 px-3 py-1 rounded-md border border-lime-500/30">Destaques Oficiais</span>
+        <h2 class="text-3xl font-extrabold text-white mt-2">Campanhas ENGECOL</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Banner 1 -->
+        <div class="p-6 rounded-3xl bg-gradient-to-br from-[#073622] to-[#041a0f] border border-emerald-700/60 shadow-xl space-y-4">
+          <span class="text-xs font-black uppercase bg-lime-500 text-slate-950 px-3 py-1 rounded-full">Economia Real</span>
+          <h3 class="text-2xl font-black text-white">Transforme o Sol em Economia</h3>
+          <p class="text-xs text-slate-300">Soluções fotovoltaicas de alta performance para residências e comércios com até 95% de abatimento.</p>
+          <a href="https://wa.me/5566996439811?text=Ol%C3%A1%20J%C3%BAnior%2C%20gostaria%20de%20um%20or%C3%A7amento%20solar." target="_blank" rel="noopener noreferrer" class="block w-full py-3 text-center rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 font-bold text-xs shadow">
+            Solicitar Orçamento
+          </a>
+        </div>
+
+        <!-- Banner 2 -->
+        <div class="p-6 rounded-3xl bg-gradient-to-br from-[#073622] to-[#041a0f] border border-emerald-700/60 shadow-xl space-y-4">
+          <span class="text-xs font-black uppercase bg-amber-400 text-slate-950 px-3 py-1 rounded-full">Solo & Agro</span>
+          <h3 class="text-2xl font-black text-white">Usinas Solares e Campo</h3>
+          <p class="text-xs text-slate-300">Engenharia em solo para fazendas, irrigação, agronegócio e geração distribuída de média tensão.</p>
+          <a href="https://wa.me/5566996439811?text=Ol%C3%A1%20J%C3%BAnior%2C%20tenho%20interesse%20em%20usinas%20solares." target="_blank" rel="noopener noreferrer" class="block w-full py-3 text-center rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 font-bold text-xs shadow">
+            Consultar Viabilidade
+          </a>
+        </div>
+
+        <!-- Banner 3 -->
+        <div class="p-6 rounded-3xl bg-gradient-to-br from-[#073622] to-[#041a0f] border border-emerald-700/60 shadow-xl space-y-4">
+          <span class="text-xs font-black uppercase bg-lime-500 text-slate-950 px-3 py-1 rounded-full">Até 72x</span>
+          <h3 class="text-2xl font-black text-white">Financiamento Facilitado</h3>
+          <p class="text-xs text-slate-300">Pague as parcelas com a própria economia da conta de luz em parceria com bancos parceiros.</p>
+          <a href="https://wa.me/5566996439811?text=Ol%C3%A1%20J%C3%BAnior%2C%20gostaria%20de%20simular%20o%20financiamento." target="_blank" rel="noopener noreferrer" class="block w-full py-3 text-center rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 font-bold text-xs shadow">
+            Simular Financiamento
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="sobre" class="py-20 bg-[#072d1d] border-b border-emerald-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 space-y-5">
+          <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-emerald-950 px-3 py-1.5 rounded-md border border-lime-500/30">Conheça a Empresa</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Sobre a ENGECOL Energia Solar</h2>
+          <p class="text-lg text-lime-300 font-medium">Compromisso com qualidade, tecnologia e sustentabilidade</p>
+          <p class="text-slate-200 text-base leading-relaxed">
+            A ENGECOL Energia Solar LTDA é uma empresa especializada em soluções completas de energia solar fotovoltaica para residências, empresas, comércios, indústrias e projetos de usinas solares em solo.
+          </p>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Nosso foco é oferecer equipamentos de alta eficiência, rigor técnico nas instalações e acompanhamento em todas as etapas, desde a avaliação de viabilidade técnica até a homologação definitiva junto à concessionária de energia.
+          </p>
+          <div class="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-200">
+            <div class="bg-emerald-950/60 p-3 rounded-lg border border-emerald-800">✅ Dimensionamento sob medida</div>
+            <div class="bg-emerald-950/60 p-3 rounded-lg border border-emerald-800">✅ Módulos de alta eficiência</div>
+            <div class="bg-emerald-950/60 p-3 rounded-lg border border-emerald-800">✅ Homologação inclusa</div>
+            <div class="bg-emerald-950/60 p-3 rounded-lg border border-emerald-800">✅ Atendimento direto com Júnior Moraes</div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 grid grid-cols-2 gap-4 text-center">
+          <div class="p-5 rounded-2xl bg-[#062417] border border-lime-500/40">
+            <span class="text-3xl font-black text-lime-400 block">Até 95%</span>
+            <span class="text-xs text-slate-300 mt-1 block">Redução na fatura de luz</span>
+          </div>
+          <div class="p-5 rounded-2xl bg-[#062417] border border-emerald-800">
+            <span class="text-3xl font-black text-white block">100%</span>
+            <span class="text-xs text-slate-300 mt-1 block">Projetos homologados</span>
+          </div>
+          <div class="p-5 rounded-2xl bg-[#062417] border border-emerald-800">
+            <span class="text-3xl font-black text-amber-400 block">25+ Anos</span>
+            <span class="text-xs text-slate-300 mt-1 block">Vida útil dos módulos</span>
+          </div>
+          <div class="p-5 rounded-2xl bg-[#062417] border border-lime-500/40">
+            <span class="text-3xl font-black text-lime-400 block">Até 72x</span>
+            <span class="text-xs text-slate-300 mt-1 block">Financiamento bancário</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="servicos" class="py-20 bg-[#051e13] border-b border-emerald-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-emerald-950 px-3 py-1.5 rounded-md border border-lime-500/30">Engenharia Completa</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Nossos Serviços Especializados</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Serv 1 -->
+        <div class="p-6 rounded-2xl bg-[#072d1d] border border-emerald-800 hover:border-lime-400/60 transition-all space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-lime-500/20 text-lime-400 flex items-center justify-center font-bold">🏠</div>
+          <h3 class="text-lg font-bold text-white">Energia Solar Residencial</h3>
+          <p class="text-xs text-slate-300">Gere sua própria eletricidade limpa no telhado de sua residência, proteja sua família contra aumentos e valorize seu imóvel.</p>
+        </div>
+
+        <!-- Serv 2 -->
+        <div class="p-6 rounded-2xl bg-[#072d1d] border border-emerald-800 hover:border-lime-400/60 transition-all space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-lime-500/20 text-lime-400 flex items-center justify-center font-bold">🏢</div>
+          <h3 class="text-lg font-bold text-white">Energia Solar Comercial</h3>
+          <p class="text-xs text-slate-300">Diminua custos operacionais fixos do seu comércio ou escritório, aumente a lucratividade e agregue valor sustentável.</p>
+        </div>
+
+        <!-- Serv 3 -->
+        <div class="p-6 rounded-2xl bg-[#072d1d] border border-emerald-800 hover:border-lime-400/60 transition-all space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-lime-500/20 text-lime-400 flex items-center justify-center font-bold">🏭</div>
+          <h3 class="text-lg font-bold text-white">Energia Solar Industrial</h3>
+          <p class="text-xs text-slate-300">Sistemas de média e alta tensão dimensionados para atender demandas energéticas industriais com alta eficiência.</p>
+        </div>
+
+        <!-- Serv 4 -->
+        <div class="p-6 rounded-2xl bg-[#072d1d] border border-emerald-800 hover:border-lime-400/60 transition-all space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-lime-500/20 text-lime-400 flex items-center justify-center font-bold">🛠️</div>
+          <h3 class="text-lg font-bold text-white">Instalação de Sistemas Fotovoltaicos</h3>
+          <p class="text-xs text-slate-300">Mão de obra técnica qualificada com instalação de inversores, cabeamento protegido e estruturas certificadas.</p>
+        </div>
+
+        <!-- Serv 5 -->
+        <div class="p-6 rounded-2xl bg-[#072d1d] border border-emerald-800 hover:border-lime-400/60 transition-all space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">☀️</div>
+          <h3 class="text-lg font-bold text-white">Projetos de Usinas Solares</h3>
+          <p class="text-xs text-slate-300">Implantação de usinas de solo em médias e grandes áreas com estudo de sombreamento, solo e conexão elétrica.</p>
+        </div>
+
+        <!-- Serv 6 -->
+        <div class="p-6 rounded-2xl bg-[#072d1d] border border-emerald-800 hover:border-lime-400/60 transition-all space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-lime-500/20 text-lime-400 flex items-center justify-center font-bold">📈</div>
+          <h3 class="text-lg font-bold text-white">Geração de Renda & Financiamento</h3>
+          <p class="text-xs text-slate-300">Alternativas de investimento para autoconsumo remoto e facilidade de financiamento bancário em até 72 vezes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Official Projects Gallery (As 7 Obras Reais Identificadas) -->
+  <section id="galeria" class="py-20 bg-[#041a0f] border-b border-emerald-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-emerald-950 px-3.5 py-1.5 rounded-md border border-lime-500/30">Portfólio de Obras</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Galeria de Projetos e Instalações</h2>
+        <p class="text-slate-300 text-sm mt-2">Acompanhe a qualidade de montagem e alinhamento dos módulos fotovoltaicos instalados em coberturas residenciais, estruturas comerciais e usinas em solo.</p>
+      </div>
+
+      <!-- Projects Grid (The 7 Real Works) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Projeto 1 -->
+        <div class="rounded-2xl overflow-hidden bg-[#072d1d] border border-emerald-800 shadow-xl space-y-4 p-5 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="bg-lime-500 text-slate-950 text-xs font-black px-2.5 py-1 rounded">OBRA 01</span>
+              <span class="text-xs text-lime-300 font-semibold">Solo Cercado / Usina</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Usina Solar em Solo — 7 Fileiras Fotovoltaicas</h3>
+            <p class="text-xs text-slate-300">Obra identificada: 7 fileiras de módulos fotovoltaicos em solo com cerca perimetral e alta irradiação para autoconsumo remoto.</p>
+          </div>
+          <a href="https://wa.me/5566996439811?text=Ol%C3%A1%20J%C3%BAnior%2C%20tenho%20interesse%20no%20Projeto%2001%20(Usina%20em%20solo%207%20fileiras)." target="_blank" rel="noopener noreferrer" class="block text-center py-2.5 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 text-xs font-bold transition-all">
+            Solicitar Orçamento deste Modelo
+          </a>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="rounded-2xl overflow-hidden bg-[#072d1d] border border-emerald-800 shadow-xl space-y-4 p-5 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="bg-lime-500 text-slate-950 text-xs font-black px-2.5 py-1 rounded">OBRA 02</span>
+              <span class="text-xs text-lime-300 font-semibold">Cobertura Metálica Comercial</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Sistema Comercial / Industrial ao Pôr do Sol</h3>
+            <p class="text-xs text-slate-300">Obra identificada: Instalação fotovoltaica em cobertura metálica ampla para redução drástica dos custos fixos da empresa.</p>
+          </div>
+          <a href="https://wa.me/5566996439811?text=Ol%C3%A1%20J%C3%BAnior%2C%20tenho%20interesse%20no%20Projeto%2002%20(Comercial)." target="_blank" rel="noopener noreferrer" class="block text-center py-2.5 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 text-xs font-bold transition-all">
+            Solicitar Orçamento deste Modelo
+          </a>
+        </div>
+
+        <!-- Projeto 3 -->
+        <div class="rounded-2xl overflow-hidden bg-[#072d1d] border border-emerald-800 shadow-xl space-y-4 p-5 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="bg-lime-500 text-slate-950 text-xs font-black px-2.5 py-1 rounded">OBRA 03</span>
+              <span class="text-xs text-lime-300 font-semibold">Telhado de Fibrocimento Ondulado</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Residencial 12 Módulos em Fibrocimento</h3>
+            <p class="text-xs text-slate-300">Obra identificada: Arranjo 2x6 com 12 placas solares perfeitamente estancadas e fixadas com parafusos prisioneiros.</p>
+          </div>
+          <a href="https://wa.me/5566996439811?text=Ol%C3%A1%20J%C3%BAnior%2C%20tenho%20interesse%20no%20Projeto%2003%20(Fibrocimento)." target="_blank" rel="noopener noreferrer" class="block text-center py-2.5 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 text-xs font-bold transition-all">
+            Solicitar Orçamento deste Modelo
+          </a>
+        </div>
+
+        <!-- Projeto 4 -->
+        <div class="rounded-2xl overflow-hidden bg-[#072d1d] border border-emerald-800 shadow-xl space-y-4 p-5 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="bg-lime-500 text-slate-950 text-xs font-black px-2.5 py-1 rounded">OBRA 04</span>
+              <span class="text-xs text-lime-300 font-semibold">Área Rural / Fazenda Agro</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Usina Solar Rural em Pastagem — Agronegócio</h3>
+            <p class="text-xs text-slate-300">Obra identificada: Geração fotovoltaica em grande área de pastagem para atendimento de bombas, pivôs e sede rural.</p>
+          </div>
+          <a href="https://wa.me/5566996439811?text=Ol%C3%A1%20J%C3%BAnior%2C%20tenho%20interesse%20no%20Projeto%2004%20(Rural)." target="_blank" rel="noopener noreferrer" class="block text-center py-2.5 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 text-xs font-bold transition-all">
+            Solicitar Orçamento deste Modelo
+          </a>
+        </div>
+
+        <!-- Projeto 5 -->
+        <div class="rounded-2xl overflow-hidden bg-[#072d1d] border border-emerald-800 shadow-xl space-y-4 p-5 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="bg-lime-500 text-slate-950 text-xs font-black px-2.5 py-1 rounded">OBRA 05</span>
+              <span class="text-xs text-lime-300 font-semibold">Telhado Cerâmico de Alto Padrão</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Residencial em Telhas Coloniais / Cerâmicas</h3>
+            <p class="text-xs text-slate-300">Obra identificada: Instalação com 12 módulos (10 em linha + 2 superiores) com ganchos em inox sem furos nas telhas.</p>
+          </div>
+          <a href="https://wa.me/5566996439811?text=Ol%C3%A1%20J%C3%BAnior%2C%20tenho%20interesse%20no%20Projeto%2005%20(Ceramica)." target="_blank" rel="noopener noreferrer" class="block text-center py-2.5 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 text-xs font-bold transition-all">
+            Solicitar Orçamento deste Modelo
+          </a>
+        </div>
+
+        <!-- Projeto 6 -->
+        <div class="rounded-2xl overflow-hidden bg-[#072d1d] border border-emerald-800 shadow-xl space-y-4 p-5 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="bg-lime-500 text-slate-950 text-xs font-black px-2.5 py-1 rounded">OBRA 06</span>
+              <span class="text-xs text-lime-300 font-semibold">Estrutura Técnica em Encosta</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Engenharia de Solo com Perfis Galvanizados</h3>
+            <p class="text-xs text-slate-300">Obra identificada: Perfis de sustentação em aço galvanizado a quente e conexão com transformador rural de média tensão.</p>
+          </div>
+          <a href="https://wa.me/5566996439811?text=Ol%C3%A1%20J%C3%BAnior%2C%20tenho%20interesse%20no%20Projeto%2006%20(Estrutura)." target="_blank" rel="noopener noreferrer" class="block text-center py-2.5 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 text-xs font-bold transition-all">
+            Solicitar Orçamento deste Modelo
+          </a>
+        </div>
+
+        <!-- Projeto 7 -->
+        <div class="rounded-2xl overflow-hidden bg-[#072d1d] border border-emerald-800 shadow-xl space-y-4 p-5 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="bg-lime-500 text-slate-950 text-xs font-black px-2.5 py-1 rounded">OBRA 07</span>
+              <span class="text-xs text-lime-300 font-semibold">Cobertura Residencial / Garagem</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Cobertura Residencial com 16 Módulos (2x8)</h3>
+            <p class="text-xs text-slate-300">Obra identificada: Fileira dupla de 16 placas solares suprindo elevado consumo com ar-condicionado e freezer.</p>
+          </div>
+          <a href="https://wa.me/5566996439811?text=Ol%C3%A1%20J%C3%BAnior%2C%20tenho%20interesse%20no%20Projeto%2007%20(16%20modulos)." target="_blank" rel="noopener noreferrer" class="block text-center py-2.5 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 text-xs font-bold transition-all">
+            Solicitar Orçamento deste Modelo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Savings Calculator -->
+  <section id="economia" class="py-20 bg-[#072d1d] border-b border-emerald-950">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-[#051e12] border-2 border-emerald-700/60 rounded-3xl p-6 sm:p-10 shadow-2xl space-y-6">
+        <div class="text-center space-y-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-lime-400">Simulador Interativo</span>
+          <h2 class="text-3xl font-extrabold text-white">Calcule sua Economia com Energia Solar</h2>
+          <p class="text-xs sm:text-sm text-slate-300">Descubra quanto você pode deixar de pagar na sua fatura mensal.</p>
+        </div>
+
+        <div class="space-y-4 pt-4">
+          <div class="flex justify-between items-center">
+            <label for="billInput" class="text-sm font-semibold text-slate-200">Qual o valor médio da sua conta de luz?</label>
+            <span id="billDisplay" class="text-2xl sm:text-3xl font-black text-lime-400">R$ 850</span>
+          </div>
+          <input type="range" id="billInput" min="200" max="8000" step="50" value="850" class="w-full h-3 bg-emerald-950 rounded-lg appearance-none cursor-pointer accent-lime-500">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+          <div class="p-4 rounded-xl bg-emerald-950/80 border border-lime-500/30 text-center">
+            <span class="text-xs text-slate-300">Economia Estimada / Mês</span>
+            <div id="monthlySavings" class="text-2xl font-black text-lime-400 mt-1">R$ 765</div>
+          </div>
+          <div class="p-4 rounded-xl bg-emerald-950/80 border border-emerald-800 text-center">
+            <span class="text-xs text-slate-300">Economia em 1 Ano</span>
+            <div id="yearlySavings" class="text-2xl font-black text-white mt-1">R$ 9.180</div>
+          </div>
+          <div class="p-4 rounded-xl bg-emerald-950/80 border border-emerald-800 text-center">
+            <span class="text-xs text-slate-300">Painéis Estimados</span>
+            <div id="panelsCount" class="text-2xl font-black text-amber-400 mt-1">~ 10 placas</div>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-emerald-950/90 border border-amber-500/30 text-xs text-slate-300">
+          ⚠️ <strong>Nota de Transparência:</strong> Os valores são estimativas orientativas. O resultado final varia conforme a irradiação solar da região, inclinação do telhado e tarifas da concessionária.
+        </div>
+
+        <button id="btnWhatsappSim" class="w-full py-4 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 font-black text-sm shadow-xl transition-all cursor-pointer">
+          Enviar essa Simulação para Júnior Moraes no WhatsApp
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solar Plants / Usinas Section -->
+  <section id="usinas" class="py-20 bg-[#051e13] border-b border-emerald-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6 space-y-5">
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-400 bg-emerald-950 px-3 py-1.5 rounded-md border border-amber-500/30">Investimento & Agronegócio</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Usinas Solares e Geração de Renda</h2>
+          <p class="text-slate-200 text-sm leading-relaxed">
+            A implantação de usinas fotovoltaicas em solo permite transformar áreas ociosas ou de pastagem em fontes consistentes de geração de energia e economia.
+          </p>
+          <div class="space-y-3 text-sm text-slate-200">
+            <div class="flex items-start gap-2.5">
+              <span class="text-lime-400 font-bold">✓</span>
+              <span><strong>Autoconsumo Remoto:</strong> Gere energia em sua fazenda ou terreno e compense faturas em residências ou comércios da mesma concessionária.</span>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="text-lime-400 font-bold">✓</span>
+              <span><strong>Agronegócio & Irrigação:</strong> Energia estável para bombas d'água, pivôs centrais, silos e secadores agrícolas.</span>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="text-lime-400 font-bold">✓</span>
+              <span><strong>Locação de Usinas:</strong> Modelo seguro para geração e distribuição em loteamentos ou parques solares.</span>
+            </div>
+          </div>
+          <div class="pt-2">
+            <a href="https://wa.me/5566996439811?text=Ol%C3%A1%20J%C3%BAnior%2C%20gostaria%20de%20conversar%20sobre%20projeto%20de%20usina%20solar." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 font-bold text-sm shadow">
+              Falar com Engenheiro Técnico no WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="lg:col-span-6">
+          <div class="p-6 rounded-3xl bg-[#072d1d] border border-emerald-800 space-y-4">
+            <h4 class="text-lg font-bold text-white flex items-center gap-2">
+              <span class="text-lime-400">⚡</span> Vantagens de Projetos em Solo ENGECOL
+            </h4>
+            <div class="space-y-3 text-xs sm:text-sm text-slate-300">
+              <p class="p-3 rounded-xl bg-emerald-950/70 border border-emerald-800">
+                <strong>Ângulo de Azimute Ideal:</strong> Sem restrições de água de telhado, alcançando o máximo pico de radiação solar ao longo do ano.
+              </p>
+              <p class="p-3 rounded-xl bg-emerald-950/70 border border-emerald-800">
+                <strong>Estrutura Galvanizada a Fogo:</strong> Durabilidade superior contra corrosão, umidade e intempéries climáticas.
+              </p>
+              <p class="p-3 rounded-xl bg-emerald-950/70 border border-emerald-800">
+                <strong>Facilidade de Manutenção:</strong> Acesso rápido no nível do solo para limpeza regular dos módulos e inspeções térmicas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Financing Section -->
+  <section id="financiamento" class="py-20 bg-[#041a0f] border-b border-emerald-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-br from-[#06291a] to-[#041a10] border-2 border-emerald-600/50 rounded-3xl p-8 sm:p-12 shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-4">
+          <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-emerald-950 px-3 py-1 rounded-md border border-lime-500/30">Parcerias Bancárias</span>
+          <h2 class="text-3xl font-extrabold text-white">Financiamento de Energia Solar</h2>
+          <p class="text-slate-200 text-sm leading-relaxed">
+            Você pode substituir a sua conta de luz pelo valor da parcela do financiamento. Conforme as condições da instituição financeira, é possível financiar até 100% do sistema fotovoltaico com carência e parcelamento estendido.
+          </p>
+          <div class="grid grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-xl bg-emerald-950 border border-lime-500/40">
+              <span class="text-xs text-lime-400 font-bold block">Cobertura</span>
+              <span class="text-lg font-black text-white">Até 100% do Projeto</span>
+            </div>
+            <div class="p-4 rounded-xl bg-emerald-950 border border-lime-500/40">
+              <span class="text-xs text-amber-400 font-bold block">Parcelamento</span>
+              <span class="text-lg font-black text-white">Em até 72 Vezes</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400">
+            Parcerias com instituições financeiras (ex.: Santander e cooperativas de crédito). Sujeito à análise de crédito e regras da instituição financeira.
+          </p>
+        </div>
+        <div class="lg:col-span-5 text-center p-6 rounded-2xl bg-[#062417] border border-emerald-700/60 space-y-4">
+          <h3 class="font-extrabold text-white text-lg">Quer Simular o seu Financiamento?</h3>
+          <p class="text-xs text-slate-300">Fale com Júnior Moraes e receba opções personalizadas de parcelamento sem compromisso.</p>
+          <a href="https://wa.me/5566996439811?text=Ol%C3%A1%20J%C3%BAnior%2C%20gostaria%20de%20simular%20o%20financiamento%20solar%20com%20a%20ENGECOL." target="_blank" rel="noopener noreferrer" class="block w-full py-3.5 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 font-bold text-sm shadow transition-all">
+            Simular com Júnior no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (Perguntas Frequentes) -->
+  <section id="faq" class="py-20 bg-[#072d1d] border-b border-emerald-950">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-2 mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-emerald-950 px-3 py-1 rounded-md border border-lime-500/30">Tire suas Dúvidas</span>
+        <h2 class="text-3xl font-extrabold text-white">Perguntas Frequentes</h2>
+        <p class="text-slate-300 text-xs sm:text-sm">Respostas diretas sobre funcionamento, viabilidade e economia solar.</p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- Q1 -->
+        <details class="group bg-[#062417] border border-emerald-800 rounded-2xl p-5 open:border-lime-500/60 transition-all cursor-pointer">
+          <summary class="flex items-center justify-between font-bold text-white text-base">
+            <span>Como funciona a energia solar fotovoltaica?</span>
+            <span class="text-lime-400 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed border-t border-emerald-900/60 pt-3">
+            Os módulos solares captam a luz do sol e geram energia elétrica contínua. O inversor transforma essa energia para corrente alternada (padrão da sua residência). O que você consome vem dos módulos; o excedente é injetado na rede da concessionária e vira créditos em quilowatt-hora (kWh) para abater a conta.
+          </p>
+        </details>
+
+        <!-- Q2 -->
+        <details class="group bg-[#062417] border border-emerald-800 rounded-2xl p-5 open:border-lime-500/60 transition-all cursor-pointer">
+          <summary class="flex items-center justify-between font-bold text-white text-base">
+            <span>Qual a economia real obtida na fatura de energia?</span>
+            <span class="text-lime-400 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed border-t border-emerald-900/60 pt-3">
+            A redução pode chegar a até 95% do consumo faturado. Permanece apenas a taxa mínima de disponibilidade da distribuidora (custo de conexão da rede) e a taxa de iluminação pública municipal.
+          </p>
+        </details>
+
+        <!-- Q3 -->
+        <details class="group bg-[#062417] border border-emerald-800 rounded-2xl p-5 open:border-lime-500/60 transition-all cursor-pointer">
+          <summary class="flex items-center justify-between font-bold text-white text-base">
+            <span>Como funciona em dias nublados ou chuvosos?</span>
+            <span class="text-lime-400 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed border-t border-emerald-900/60 pt-3">
+            O sistema fotovoltaico funciona com radiação solar, portanto continua gerando eletricidade mesmo sob tempo nublado, embora em menor intensidade. À noite, você utiliza normalmente a energia da rede convencional compensando com os créditos gerados durante o dia.
+          </p>
+        </details>
+
+        <!-- Q4 -->
+        <details class="group bg-[#062417] border border-emerald-800 rounded-2xl p-5 open:border-lime-500/60 transition-all cursor-pointer">
+          <summary class="flex items-center justify-between font-bold text-white text-base">
+            <span>Como solicitar um orçamento com a ENGECOL?</span>
+            <span class="text-lime-400 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed border-t border-emerald-900/60 pt-3">
+            Basta enviar uma foto da sua fatura recente de energia para o WhatsApp de Júnior Moraes no (66) 99643-9811 ou preencher o formulário no final da página. Nossa equipe faz o estudo preliminar com cálculo de placas e viabilidade gratuitamente.
+          </p>
+        </details>
+
+        <!-- Q5 -->
+        <details class="group bg-[#062417] border border-emerald-800 rounded-2xl p-5 open:border-lime-500/60 transition-all cursor-pointer">
+          <summary class="flex items-center justify-between font-bold text-white text-base">
+            <span>A ENGECOL cuida da homologação com a concessionária?</span>
+            <span class="text-lime-400 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed border-t border-emerald-900/60 pt-3">
+            Sim! Todo o projeto de engenharia, emissão de ART/TRT, protocolo junto à concessionária de energia e vistoria técnica para troca do medidor bidirecional são de responsabilidade da ENGECOL.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contato" class="py-20 bg-[#051e12] border-b border-emerald-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-emerald-950 px-3 py-1.5 rounded-md border border-lime-500/30">Canais Oficiais</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Fale com a ENGECOL Energia Solar</h2>
+          <p class="text-slate-200 text-sm leading-relaxed">
+            Converse diretamente com o responsável técnico Júnior Moraes e receba uma avaliação especializada do seu imóvel ou usina.
+          </p>
+
+          <div class="space-y-3">
+            <a href="https://wa.me/5566996439811" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 rounded-xl bg-[#062417] border border-emerald-800 hover:border-lime-400 transition-all">
+              <span class="text-2xl">💬</span>
+              <div>
+                <span class="text-xs text-lime-400 font-bold block">WhatsApp Principal</span>
+                <span class="text-white font-bold text-base">(66) 99643-9811</span>
+                <span class="text-xs text-slate-300 block">Júnior Moraes</span>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/engecol_solar/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 rounded-xl bg-[#062417] border border-emerald-800 hover:border-lime-400 transition-all">
+              <span class="text-2xl">📸</span>
+              <div>
+                <span class="text-xs text-lime-400 font-bold block">Instagram Oficial</span>
+                <span class="text-white font-bold text-base">@engecol_solar</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="lg:col-span-7">
+          <div class="p-6 sm:p-8 rounded-3xl bg-[#062417] border-2 border-emerald-700/60 shadow-2xl space-y-4">
+            <h3 class="text-xl font-bold text-white">Solicitar Orçamento Gratuito</h3>
+            <p class="text-xs text-slate-300">Preencha os dados abaixo para gerar a proposta no WhatsApp de Júnior Moraes.</p>
+            <form id="quoteForm" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-200 mb-1">Seu Nome *</label>
+                  <input type="text" id="formName" required placeholder="Ex: Carlos Silva" class="w-full px-3 py-2.5 rounded-xl bg-emerald-950 border border-emerald-700 text-white text-sm focus:border-lime-400 outline-none">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-200 mb-1">WhatsApp / Telefone *</label>
+                  <input type="tel" id="formPhone" required placeholder="Ex: (66) 99999-9999" class="w-full px-3 py-2.5 rounded-xl bg-emerald-950 border border-emerald-700 text-white text-sm focus:border-lime-400 outline-none">
+                </div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-200 mb-1">Cidade *</label>
+                  <input type="text" id="formCity" required placeholder="Ex: Rondonópolis - MT" class="w-full px-3 py-2.5 rounded-xl bg-emerald-950 border border-emerald-700 text-white text-sm focus:border-lime-400 outline-none">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-200 mb-1">Tipo de Imóvel</label>
+                  <select id="formType" class="w-full px-3 py-2.5 rounded-xl bg-emerald-950 border border-emerald-700 text-white text-sm focus:border-lime-400 outline-none">
+                    <option value="Residencial">Residencial</option>
+                    <option value="Comercial">Comercial</option>
+                    <option value="Industrial">Industrial</option>
+                    <option value="Rural / Usina">Rural / Usina em Solo</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-200 mb-1">Valor Médio da Conta de Luz Atual (R$)</label>
+                <input type="text" id="formBill" placeholder="Ex: R$ 850,00" class="w-full px-3 py-2.5 rounded-xl bg-emerald-950 border border-emerald-700 text-white text-sm focus:border-lime-400 outline-none">
+              </div>
+              <button type="submit" class="w-full py-3.5 rounded-xl bg-lime-500 hover:bg-lime-400 text-slate-950 font-black text-sm shadow-xl transition-all cursor-pointer">
+                Enviar Orçamento para o WhatsApp
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#03150c] text-slate-300 py-12 border-t border-emerald-950 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <div class="text-xl font-black text-white">
+        ENGE<span class="text-lime-400">COL</span> ENERGIA SOLAR LTDA
+      </div>
+      <p class="text-xs text-slate-400 max-w-md mx-auto">
+        Soluções completas em energia fotovoltaica residencial, comercial, industrial e usinas de solo.
+      </p>
+      <div class="text-xs text-slate-400 pt-4 border-t border-emerald-900/40">
+        © <span id="year"></span> ENGECOL ENERGIA SOLAR LTDA · WhatsApp: (66) 99643-9811 · Contato: Júnior Moraes
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/5566996439811?text=Ol%C3%A1%20J%C3%BAnior%2C%20estou%20no%20site%20da%20ENGECOL%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-lime-500 hover:bg-lime-400 text-slate-950 flex items-center justify-center text-2xl shadow-2xl transition-transform hover:scale-110 active:scale-95" aria-label="Falar no WhatsApp">
+    💬
+  </a>
+
+  <!-- Script for Interactivity -->
+  <script>
+    // Ano atual no rodapé
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Menu móvel toggle
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      // Fechar menu ao clicar em qualquer link
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // Calculadora interativa
+    const billInput = document.getElementById('billInput');
+    const billDisplay = document.getElementById('billDisplay');
+    const monthlySavings = document.getElementById('monthlySavings');
+    const yearlySavings = document.getElementById('yearlySavings');
+    const panelsCount = document.getElementById('panelsCount');
+    const btnWhatsappSim = document.getElementById('btnWhatsappSim');
+
+    function updateCalculator() {
+      const val = parseInt(billInput.value, 10);
+      billDisplay.textContent = 'R$ ' + val.toLocaleString('pt-BR');
+      const monthly = Math.round(val * 0.90);
+      const yearly = monthly * 12;
+      const panels = Math.max(4, Math.round(val / 85));
+
+      monthlySavings.textContent = 'R$ ' + monthly.toLocaleString('pt-BR');
+      yearlySavings.textContent = 'R$ ' + yearly.toLocaleString('pt-BR');
+      panelsCount.textContent = '~ ' + panels + ' placas';
+    }
+
+    if (billInput) {
+      billInput.addEventListener('input', updateCalculator);
+      updateCalculator();
+    }
+
+    if (btnWhatsappSim) {
+      btnWhatsappSim.addEventListener('click', function() {
+        const val = billInput.value;
+        const monthly = Math.round(val * 0.90);
+        const text = encodeURIComponent('Olá Júnior, fiz a simulação no site da ENGECOL com conta de R$ ' + val + ' (economia estimada de R$ ' + monthly + '/mês). Gostaria de um orçamento.');
+        window.open('https://wa.me/5566996439811?text=' + text, '_blank');
+      });
+    }
+
+    // Formulário de orçamento
+    const quoteForm = document.getElementById('quoteForm');
+    if (quoteForm) {
+      quoteForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('formName').value;
+        const phone = document.getElementById('formPhone').value;
+        const city = document.getElementById('formCity').value;
+        const type = document.getElementById('formType').value;
+        const bill = document.getElementById('formBill').value;
+
+        const text = encodeURIComponent(
+          '*ORÇAMENTO — ENGECOL ENERGIA SOLAR*\n' +
+          'Nome: ' + name + '\n' +
+          'WhatsApp: ' + phone + '\n' +
+          'Cidade: ' + city + '\n' +
+          'Tipo: ' + type + '\n' +
+          'Fatura Média: ' + (bill || 'Não informada')
+        );
+        window.open('https://wa.me/5566996439811?text=' + text, '_blank');
+      });
+    }
+  </script>
+</body>
+</html>

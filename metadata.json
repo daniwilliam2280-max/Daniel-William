@@ -1,0 +1,6 @@
+{
+  "name": "ENGECOL Energia Solar LTDA",
+  "description": "Site oficial da ENGECOL Energia Solar LTDA. Soluções em energia solar fotovoltaica residencial, comercial, industrial e usinas solares.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
